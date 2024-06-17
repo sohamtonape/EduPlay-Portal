@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Games</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <style>
+        .navbar {
+            background-color: #343a40;
+            padding: 1rem 2rem;
+        }
+        .navbar-brand {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: #d1d1d1;
+            margin-right: 1rem;
+            font-size: 1.1rem;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+            background-color: #495057;
+            border-radius: 5px;
+        }
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 2rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="bi bi-controller"></i> Games</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/games/tictactoe}"><i class="bi bi-grid-3x3-gap"></i> Tic-Tac-Toe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/games/snake}"><i class="bi bi-arrow-right-square"></i> Snake Game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/games/rockpaperscissors}"><i class="bi bi-hand-index-thumb"></i> Rock Paper Scissors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/games/typing_speed}"><i class="bi bi-speedometer2"></i> Typing Speed Test</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" th:href="@{/games/ping_pong}"><i class="bi bi-circle"></i> Ping Pong</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/games/archery}"><i class="bi bi-bullseye"></i> Archery</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Games</h1>
+        <p>Choose a game to play:</p>
+        <ul>
+            <li>
+                <a th:href="@{/games/tictactoe}">Tic-Tac-Toe</a>
+                <p>
+                	Play against a friend or computer in a classic 3x3 grid game. Get three in a row to win!
+                	<br>
+                    Origin: Ancient game popularized in the 20th century.
+                    <br>
+                    Gameplay: Two players mark spaces in a 3x3 grid aiming to align three symbols.
+                    <br>
+                    Rules: Achieve three in a row horizontally, vertically, or diagonally to win.
+                </p>
+            </li>
+            <li>
+                <a th:href="@{/games/snake}">Snake Game</a>
+                <p>
+                	Navigate a snake to eat food and grow longer. Avoid walls and your own tail to survive and score high!
+                	<br>
+                    Origin: Early video game concept, made iconic by Nokia.
+                    <br>
+                    Gameplay: Control a snake to eat food and avoid colliding with walls or its own tail.
+                    <br>
+                    Rules: Grow longer by eating food. Game ends on collision.
+                </p>
+            </li>
+            <li>
+                <a th:href="@{/games/rockpaperscissors}">Rock Paper Scissors</a>
+                <p>
+                	Challenge opponents with rock, paper, or scissors. Win by predicting and countering their moves!
+                	<br>
+                    Origin: Ancient hand game popular worldwide.
+                    <br>
+                    Gameplay: Players simultaneously choose rock, paper, or scissors.
+                    <br>
+                    Rules: Rock crushes scissors, scissors cuts paper, paper covers rock.
+                </p>
+            </li>
+            <li>
+                <a th:href="@{/games/typing_speed}">Typing Speed Test</a>
+                <p>
+                	Test your typing speed with random text. Compete against time and accuracy to achieve the highest WPM!
+                	<br>
+                    Origin: Typing proficiency test used since typewriters.
+                    <br>
+                    Gameplay: Type a given passage as fast and accurately as possible.
+                    <br>
+                    Rules: Measure words per minute (WPM) and accuracy percentage.
+                </p>
+            </li>
+            <li>
+                <a th:href="@{/games/ping_pong}">Ping Pong</a>
+                <p>
+                	Play table tennis against the computer or a friend. Score by hitting the ball past your opponent!
+                	<br>
+                    Origin: Indoor version of tennis, originated in England.
+                    <br>
+                    Gameplay: Hit a ball back and forth across a table with paddles.
+                    <br>
+                    Rules: Score points by forcing the opponent to fail to return the ball over the net.
+                </p>
+            </li>
+            <li>
+                <a th:href="@{/games/archery}">Archery</a>
+                <p>
+                	Aim arrows at targets to score points. Challenge yourself with increasing difficulty levels!
+                	<br>
+                    Origin: Ancient skill turned competitive sport.
+                    <br>
+                    Gameplay: Shoot arrows at a target for points based on accuracy.
+                    <br>
+                    Rules: Score points based on arrow proximity to the center of the target.
+                    <br></br>
+                </p>
+            </li>
+        </ul>
+    </div><br></br>
+
+    <footer class="footer">
+        <p>Made by Somu</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
